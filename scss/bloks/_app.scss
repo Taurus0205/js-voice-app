@@ -2,6 +2,25 @@
   margin-top: 20px;
 }
 
+.content-img {
+  border: 1px solid #fff;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.mustafo {
+  background-image: url(../images/Mustafo.jpg);
+}
+
+.afruza {
+  background-image: url(../images/Afruza.jpg);
+}
+
 .btn {
   display: block;
   margin: 0 auto;
@@ -14,18 +33,21 @@
   border-radius: 5px;
 }
 
-.square {
+.content-text {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   background-color: aqua;
   width: 200px;
-  height: 200px;
+  height: 100px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .span {
-  color: red;
+  text-align: center;
+  color: blue;
   font-size: 32px;
+  text-transform: uppercase;
 }
