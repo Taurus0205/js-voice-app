@@ -1,16 +1,16 @@
 .wrapper {
-  margin-top: 20px;
 }
 
 .content-img {
-  border: 1px solid #333;
+  box-shadow: 0 0 10px 1px #333;
   margin: 0 auto;
   margin-bottom: 20px;
-  width: 280px;
-  height: 280px;
-  background-image: url(../images/afruza-initial.jpg);
+  width: 350px;
+  height: 350px;
+  // background-image: url(../images/afruza-initial.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border-radius: 10px;
 }
 

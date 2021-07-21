@@ -2,7 +2,8 @@ var elText = document.querySelector(".content-text");
 var elImg = document.querySelector(".content-img");
 
 var rec = new webkitSpeechRecognition();
-rec.lang = "uz-UZ";
+// rec.lang = "uz-UZ";
+rec.lang = "en-US";
 rec.onerror = function (err) {
   elSpan.textContent = "error";
 };
@@ -15,7 +16,7 @@ rec.onresult = function (evt) {
   var command = evt.results[0][0].transcript;
   elText.textContent = command;
 
-  if (command === "mustafo") {
+  if (command === "brother" || command === "uka" || command === "mustafo") {
     elImg.classList.add("mustafo");
     elImg.classList.remove(
       "afruza",
@@ -27,7 +28,7 @@ rec.onresult = function (evt) {
       "ona",
       "togo"
     );
-  } else if (command === "afruza") {
+  } else if (command === "afruza" || command === "me" || command === "I") {
     elImg.classList.remove(
       "mustafo",
       "dada",
@@ -39,7 +40,7 @@ rec.onresult = function (evt) {
       "togo"
     );
     elImg.classList.add("afruza");
-  } else if (command === "bobo") {
+  } else if (command === "grandad" || command === "bobo") {
     elImg.classList.remove(
       "mustafo",
       "dada",
@@ -50,8 +51,8 @@ rec.onresult = function (evt) {
       "ona",
       "togo"
     );
-    elImg.classList.add("afruza");
-  } else if (command === "buvi") {
+    elImg.classList.add("bobo");
+  } else if (command === "granny" || command === "buvi") {
     elImg.classList.remove(
       "mustafo",
       "dada",
@@ -63,7 +64,12 @@ rec.onresult = function (evt) {
       "togo"
     );
     elImg.classList.add("buvi");
-  } else if (command === "dada") {
+  } else if (
+    command === "father" ||
+    command === "dad" ||
+    command === "daddy" ||
+    command === "dada"
+  ) {
     elImg.classList.remove(
       "mustafo",
       "afruza",
@@ -75,7 +81,7 @@ rec.onresult = function (evt) {
       "togo"
     );
     elImg.classList.add("dada");
-  } else if (command === "komyuter") {
+  } else if (command === "laptop" || command === "noutbuk") {
     elImg.classList.remove(
       "mustafo",
       "dada",
@@ -87,7 +93,7 @@ rec.onresult = function (evt) {
       "togo"
     );
     elImg.classList.add("komp");
-  } else if (command === "oila") {
+  } else if (command === "family" || command === "we" || command === "oila") {
     elImg.classList.remove(
       "mustafo",
       "dada",
@@ -99,7 +105,12 @@ rec.onresult = function (evt) {
       "togo"
     );
     elImg.classList.add("oila");
-  } else if (command === "ona") {
+  } else if (
+    command === "mother" ||
+    command === "mom" ||
+    command === "mommy" ||
+    command === "ona"
+  ) {
     elImg.classList.remove(
       "mustafo",
       "dada",
@@ -111,7 +122,7 @@ rec.onresult = function (evt) {
       "togo"
     );
     elImg.classList.add("ona");
-  } else if (command === "tog'o") {
+  } else if (command === "uncle" || command === "tog'o") {
     elImg.classList.remove(
       "mustafo",
       "dada",
