@@ -2,10 +2,10 @@ var elText = document.querySelector(".content-text");
 var elImg = document.querySelector(".content-img");
 
 var rec = new webkitSpeechRecognition();
-// rec.lang = "uz-UZ";
-rec.lang = "en-US";
+rec.lang = "uz-UZ";
+// rec.lang = "en-US";
 rec.onerror = function (err) {
-  elSpan.textContent = "error";
+  // elSpan.textContent = "error";
 };
 
 rec.onend = function () {
@@ -66,8 +66,8 @@ rec.onresult = function (evt) {
     elImg.classList.add("buvi");
   } else if (
     command === "father" ||
-    command === "dad" ||
     command === "daddy" ||
+    command === "dad" ||
     command === "dada"
   ) {
     elImg.classList.remove(
@@ -146,6 +146,40 @@ rec.onresult = function (evt) {
       "ona",
       "togo"
     );
+  }
+
+  // colors
+
+  if (command === "black" || command === "qora") {
+    elImg.style.backgroundColor = "black";
+  } else if (command === "red" || command === "qizil") {
+    elImg.style.backgroundColor = "red";
+  } else if (command === "green" || command === "yashil") {
+    elImg.style.backgroundColor = "green";
+  } else if (command === "blue" || command === "ko'k") {
+    elImg.style.backgroundColor = "blue";
+  } else if (command === "yellow" || command === "sariq") {
+    elImg.style.backgroundColor = "yellow";
+  } else {
+    elImg.style.backgroundColor = "white";
+  }
+
+  // numbers
+  if (
+    command === "1" ||
+    command === "2" ||
+    command === "3" ||
+    command === "4" ||
+    command === "5" ||
+    command === "6" ||
+    command === "7" ||
+    command === "8" ||
+    command === "9" ||
+    command === "10"
+  ) {
+    elImg.textContent = command;
+  } else {
+    elImg.textContent = "";
   }
 };
 
